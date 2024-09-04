@@ -63,15 +63,14 @@ input[type="submit"],
 
 
 .main-content {
-    padding: 20px;
+    padding: 0px 20px;
 }
 
     .main-content .paymentpart,
     .main-content .orderpart {
         vertical-align: top;
-        display: inline-block;
+        display: block;
         background: #FFFFFF;
-        /* ReSharper disable once RequiresFallbackColor */
         border: 1px solid rgba(68, 69, 73, 0.15);
         margin: 0;
         font-style: normal;
@@ -380,6 +379,12 @@ form.payment-paymentmethodform {
 .payment-field-container {
     overflow: auto;
 }
+.payment-field-container:first-of-type{
+    padding-top: 20px;
+}
+.payment-field-container:last-of-type{
+    margin-bottom: 20px;
+}
 
 form.payment-paymentmethodform input.payment-input-error {
     border: 1px solid #EA122A;
@@ -561,6 +566,15 @@ form.payment-paymentmethodform #payment-cardnumber-cobadging-link {
     text-align: right;
     color: #00A8C2;
     text-decoration: none;
+}
+
+form.payment-paymentmethodform label#payment-cardnumber-cobadging-brandconfirmation {
+    float: right;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-align: right;
+    padding: .2rem 0 0 0;
+    color: #938c8c;
 }
 
 form.payment-paymentmethodform #payment-cardnumber-cobadging-brandlist-label {
